@@ -1,0 +1,23 @@
+meta {
+  name: List of languages with filter
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/languages/{{filter}}?order=name&reverse=false&hidebroken=false&offset=0&limit=100000
+  body: none
+  auth: none
+}
+
+query {
+  order: name
+  reverse: false
+  hidebroken: false
+  offset: 0
+  limit: 100000
+}
+
+vars:pre-request {
+  filter: germ
+}

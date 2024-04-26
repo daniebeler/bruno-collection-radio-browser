@@ -1,0 +1,24 @@
+meta {
+  name: List of states by country with filter
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/states/{{country}}/{{filter}}?order=name&reverse=false&hidebroken=false&offset=0&limit=100000
+  body: none
+  auth: none
+}
+
+query {
+  order: name
+  reverse: false
+  hidebroken: false
+  offset: 0
+  limit: 100000
+}
+
+vars:pre-request {
+  filter: vor
+  country: Austria
+}
