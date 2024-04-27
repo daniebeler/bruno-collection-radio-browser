@@ -1,0 +1,23 @@
+meta {
+  name: Search radio stations by UUID
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/stations/byuuid/{{searchterm}}?order=name&reverse=false&offset=0&limit=10&hidebroken=false
+  body: none
+  auth: none
+}
+
+query {
+  order: name
+  reverse: false
+  offset: 0
+  limit: 10
+  hidebroken: false
+}
+
+vars:pre-request {
+  searchterm: 963ccae5-0601-11e8-ae97-52543be04c81
+}

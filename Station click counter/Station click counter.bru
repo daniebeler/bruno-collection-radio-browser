@@ -1,0 +1,15 @@
+meta {
+  name: Station click counter
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/url/{{stationuuid}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  stationuuid: 963ccae5-0601-11e8-ae97-52543be04c81
+}

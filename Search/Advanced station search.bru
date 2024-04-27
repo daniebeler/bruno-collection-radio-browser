@@ -1,0 +1,37 @@
+meta {
+  name: Advanced station search
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/stations/search?is_https=false&order=name&reverse=false&offset=0&limit=100000&hidebroken=false
+  body: none
+  auth: none
+}
+
+query {
+  is_https: false
+  order: name
+  reverse: false
+  offset: 0
+  limit: 100000
+  hidebroken: false
+  ~name: 
+  ~nameExact: false
+  ~country: 
+  ~countryExact: false
+  ~countrycode: 
+  ~state: 
+  ~stateExact: 
+  ~language: 
+  ~languageExact: false
+  ~tag: 
+  ~tagExact: false
+  ~tagList: 
+  ~codec: 
+  ~bitrateMin: 0
+  ~bitrateMax: 1000000
+  ~has_geo_info: 
+  ~has_extended_info: 
+}

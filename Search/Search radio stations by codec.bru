@@ -1,0 +1,23 @@
+meta {
+  name: Search radio stations by codec
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/stations/bycodec/{{searchterm}}?order=name&reverse=false&offset=0&limit=10&hidebroken=false
+  body: none
+  auth: none
+}
+
+query {
+  order: name
+  reverse: false
+  offset: 0
+  limit: 10
+  hidebroken: false
+}
+
+vars:pre-request {
+  searchterm: mp3
+}

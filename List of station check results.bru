@@ -1,0 +1,18 @@
+meta {
+  name: List of station check results
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/checks?stationuuid=f0083ae1-c8c8-4cb9-b68d-526a36f9a902&lastcheckuuid=f0083ae1-c8c8-4cb9-b68d-526a36f9a902&seconds=0&limit=10
+  body: none
+  auth: none
+}
+
+query {
+  stationuuid: f0083ae1-c8c8-4cb9-b68d-526a36f9a902
+  lastcheckuuid: f0083ae1-c8c8-4cb9-b68d-526a36f9a902
+  seconds: 0
+  limit: 10
+}

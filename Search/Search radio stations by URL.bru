@@ -1,0 +1,15 @@
+meta {
+  name: Search radio stations by URL
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/stations/byurl?url=http://this.is.a.link/test.mp3
+  body: none
+  auth: none
+}
+
+query {
+  url: http://this.is.a.link/test.mp3
+}

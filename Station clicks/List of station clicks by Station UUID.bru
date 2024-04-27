@@ -1,0 +1,20 @@
+meta {
+  name: List of station clicks by Station UUID
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://de1.api.radio-browser.info/json/clicks/{{stationuuid}}?seconds=0
+  body: none
+  auth: none
+}
+
+query {
+  seconds: 0
+  ~lastcheckuuid: f0083ae1-c8c8-4cb9-b68d-526a36f9a902
+}
+
+vars:pre-request {
+  stationuuid: f0083ae1-c8c8-4cb9-b68d-526a36f9a902
+}
